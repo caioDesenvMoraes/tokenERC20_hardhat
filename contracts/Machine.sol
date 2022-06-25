@@ -68,7 +68,6 @@ contract Machine {
     // 1- comprar tokens com ether
     function buy() payable public isActived returns(bool) {
         uint256 amountTobuy = msg.value;
-        // estava verificando da carteira do contrato, agora ta verificando da reserva da maquina
         uint256 balance = tokenBalance;
         uint256 tokenValue = amountTobuy / purchasePrice_;
         
